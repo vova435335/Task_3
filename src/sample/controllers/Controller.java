@@ -2,9 +2,11 @@ package sample.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.input.MouseEvent;
 import sample.graphics.arrows.CreateArrow;
 import sample.graphics.arrows.aggregationArrow.AggregationArrowFactory;
+import sample.graphics.arrows.associationArrow.AssociationArrowFactory;
 import sample.graphics.arrows.compositionArrow.CompositionArrowFactory;
 import sample.graphics.arrows.dependenceArrow.DependenceArrowFactory;
 import sample.graphics.arrows.implementationArrow.ImplementationArrowFactory;
@@ -19,9 +21,15 @@ public class Controller {
 
     @FXML
     private Canvas canvas;
+    @FXML
+    private ChoiceBox<String> select_cb;
 
     @FXML
     void initialize() {
+        select_cb.getItems().addAll( "Ассосифция", "Наследование", "Реализация", "Зависимость", "Агрегация", "Композиция");
+        select_cb.setValue(select_cb.getItems().get(0));
+        select_cb.getSelectionModel().clearAndSelect(0);
+
         canvas.setOnMousePressed(this::onStart);
         canvas.setOnMouseDragged(this::onEnd);
         canvas.setOnMouseReleased(this::onEnd);
