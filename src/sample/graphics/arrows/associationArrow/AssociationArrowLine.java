@@ -7,6 +7,7 @@ public class AssociationArrowLine extends ArrowLine {
 
     @Override
     public void paint(double xStart, double yStart, double xEnd, double yEnd, GraphicsContext graphicsContext) {
+        graphicsContext.beginPath();
         graphicsContext.setStroke(color);
         graphicsContext.setLineWidth(2);
         graphicsContext.moveTo(xStart, yStart);

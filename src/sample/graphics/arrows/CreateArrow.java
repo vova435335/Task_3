@@ -10,6 +10,8 @@ public class CreateArrow {
 
     public CreateArrow(ArrowFactory factory) {
         this.factory = factory;
+        createArrowhead();
+        createArrowLine();
     }
 
     private void createArrowhead() {
