@@ -4,16 +4,16 @@ import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.input.MouseEvent;
 import sample.graphics.arrows.CreateArrow;
-import sample.graphics.arrows.associationArrow.AssociationArrowFactory;
+import sample.graphics.arrows.dependenceArrow.DependenceArrowFactory;
+import sample.graphics.arrows.implementationArrow.ImplementationArrowFactory;
+import sample.graphics.arrows.inheritanceArrow.InheritanceArrowFactory;
 
 public class Controller {
 
-    private CreateArrow arrow = new CreateArrow(new AssociationArrowFactory());
+    private CreateArrow arrow = new CreateArrow(new DependenceArrowFactory());
 
     private double xStart;
     private double yStart;
-    private double xEnd;
-    private double yEnd;
 
     @FXML
     private Canvas canvas;
@@ -31,8 +31,8 @@ public class Controller {
     }
 
     private void onEnd(MouseEvent event) {
-        xEnd = event.getX();
-        yEnd = event.getY();
+        double xEnd = event.getX();
+        double yEnd = event.getY();
         canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
         arrow.paintArrow(xStart, yStart, xEnd, yEnd, canvas.getGraphicsContext2D());
     }
