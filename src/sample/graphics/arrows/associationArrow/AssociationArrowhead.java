@@ -3,7 +3,7 @@ package sample.graphics.arrows.associationArrow;
 import javafx.scene.canvas.GraphicsContext;
 import sample.graphics.arrows.Arrowhead;
 
-public class AssociationArrowhead extends Arrowhead {
+class AssociationArrowhead extends Arrowhead {
 
     @Override
     public void paint(double xStart, double yStart, double xEnd, double yEnd, GraphicsContext graphicsContext) {

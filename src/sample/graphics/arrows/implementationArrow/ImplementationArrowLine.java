@@ -3,7 +3,7 @@ package sample.graphics.arrows.implementationArrow;
 import javafx.scene.canvas.GraphicsContext;
 import sample.graphics.arrows.ArrowLine;
 
-public class ImplementationArrowLine extends ArrowLine {
+class ImplementationArrowLine extends ArrowLine {
 
     @Override
     public void paint(double xStart, double yStart, double xEnd, double yEnd, GraphicsContext graphicsContext) {

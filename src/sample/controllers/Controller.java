@@ -4,13 +4,15 @@ import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.input.MouseEvent;
 import sample.graphics.arrows.CreateArrow;
+import sample.graphics.arrows.aggregationArrow.AggregationArrowFactory;
+import sample.graphics.arrows.compositionArrow.CompositionArrowFactory;
 import sample.graphics.arrows.dependenceArrow.DependenceArrowFactory;
 import sample.graphics.arrows.implementationArrow.ImplementationArrowFactory;
 import sample.graphics.arrows.inheritanceArrow.InheritanceArrowFactory;
 
 public class Controller {
 
-    private CreateArrow arrow = new CreateArrow(new DependenceArrowFactory());
+    private CreateArrow arrow = new CreateArrow(new CompositionArrowFactory());
 
     private double xStart;
     private double yStart;

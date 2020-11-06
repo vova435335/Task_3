@@ -4,7 +4,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import sample.graphics.arrows.Arrowhead;
 
-public class ImplementationArrowhead extends Arrowhead {
+class ImplementationArrowhead extends Arrowhead {
 
     @Override
     public void paint(double xStart, double yStart, double xEnd, double yEnd, GraphicsContext graphicsContext) {
